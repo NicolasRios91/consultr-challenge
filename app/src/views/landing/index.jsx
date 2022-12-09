@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import { getHeroes } from "./api";
-import { addHeroes } from "./features/heroes";
+import { getHeroes } from "../../api";
+import { addHeroes } from "../../features/heroes";
 import { useDispatch, useSelector } from "react-redux";
+import { Card } from "../../components/card";
+import { Header } from "../../components/header";
+import { CardsContainer } from "./styles";
 
-function App() {
+export const App = () => {
   const [errorState, setErrorState] = useState({ hasError: false });
   const [loading, setLoading] = useState(true);
   const data = useSelector((state) => state.heroes.data);
@@ -26,10 +28,15 @@ function App() {
   if (errorState.hasError) return <div>{errorState.message};</div>;
 
   return data?.length > 1 ? (
-    <div className="App">Heroes added</div>
+    <>
+      <Header />
+      <CardsContainer>
+        {data.slice(0, 10).map((character) => (
+          <Card key={character.name} character={character} />
+        ))}
+      </CardsContainer>
+    </>
   ) : (
-    <div className="App">List is empty</div>
+    <div>List is empty</div>
   );
-}
-
-export default App;
+};
