@@ -27,4 +27,14 @@ export const LabelsContainer = styled.div`
       font-size: 18px;
     }
   }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+
+    p {
+      :first-child {
+        font-size: 16px;
+      }
+    }
+  }
 `;
