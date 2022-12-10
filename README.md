@@ -33,7 +33,7 @@ With this app client will be able to:
 
 - See a set list of heroes in a grid
 - Mobile view available
-- Move to pagination branch to use navigation buttons to see more heroes! (not asked but I thought It could be useful)
+- Move to pagination branch to use navigation buttons to see more heroes! (not required but I thought It could be useful)
 
 ```
 git checkout pagination
