@@ -32,7 +32,7 @@ export const App = () => {
       <Header />
       <CardsContainer>
         {data.slice(0, 10).map((character) => (
-          <Card key={character.name} character={character} />
+          <Card key={character.id} character={character} />
         ))}
       </CardsContainer>
     </>
