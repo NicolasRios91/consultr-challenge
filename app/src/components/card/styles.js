@@ -6,8 +6,21 @@ export const Container = styled.div`
   flex-direction: column;
   border-radius: 8px;
 
+  :before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 160px;
+    height: 160px;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5) 50%,
+      black
+    );
+  }
+
   img {
-    filter: brightness(65%);
+    z-index: -1;
     border-radius: inherit;
   }
 `;
@@ -18,6 +31,7 @@ export const LabelsContainer = styled.div`
   color: #ffffff;
   padding: 16px;
   font-family: "system-ui";
+  font-weight: 100;
 
   p {
     margin: 0;

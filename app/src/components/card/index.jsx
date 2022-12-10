@@ -1,6 +1,5 @@
 import { Container, LabelsContainer } from "./styles";
 
-//todo shadow styles for image
 export const Card = ({ character }) => {
   const { name, images, appearance } = character;
 
