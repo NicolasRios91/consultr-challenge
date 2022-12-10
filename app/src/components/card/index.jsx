@@ -7,9 +7,9 @@ export const Card = ({ character }) => {
     <Container>
       <img src={images.sm} alt={name} />
       <LabelsContainer>
-        <p>{name}</p>
-        <p>Height: {appearance.height[1]}</p>
-        <p>Weight: {appearance.weight[1]}</p>
+        <p>{name || "Unknown"}</p>
+        <p>Height: {appearance.height[1] || "Unknown"}</p>
+        <p>Weight: {appearance.weight[1] || "Unknown"}</p>
       </LabelsContainer>
     </Container>
   );
